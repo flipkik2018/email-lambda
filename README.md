@@ -1,2 +1,2 @@
 # email-lambda
-deploying 1
+deploying 2
