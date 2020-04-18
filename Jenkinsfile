@@ -6,7 +6,8 @@ def region = 'us-west-2'
 pipeline {
     agent any
 
-    stage('Checkout'){
+    stages {
+        stage('Checkout'){
             checkout scm
         }
 
@@ -36,6 +37,8 @@ pipeline {
             }
         }
     }
+    }
+   
 
     def commitID() {
         sh 'git rev-parse HEAD > .git/commitID'
